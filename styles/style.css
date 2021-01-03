@@ -4,6 +4,63 @@
     margin: 0;
     padding: 0;
     font-family: Roboto, Arial, sans-serif;
-    background-color: #1a1a1a;
     color: #fff;
+}
+
+/* GENERAL STYLES */
+
+body {
+    background-color: #1a1a1a;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-weight: 300;
+}
+
+span {
+    padding: 0 .5rem;
+    font-weight: 300;
+}
+
+/* BUTTONS */
+
+button {
+    padding: .6rem 1.5rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover, button:active {
+    color: #dbdbdb;
+}
+
+.see-more {
+    border: 2px solid #fff;
+    background-color: #ffffff00;
+}
+
+.see-more:hover, .see-more:active {
+    border-color: #c2c2c2;
+    background-color: #ffffff11;
+}
+
+.whatsapp {
+    border: 2px solid #fe004a;
+    background-color: #fe004a;
+}
+
+.whatsapp:hover, .whatsapp:active {
+    border-color: #c50038;
+    background-color: #c50038;
+}
+
+/* SPACE */
+/* padding of main sections */
+
+.inner-space {
+    padding: 20px 30px;
 }
