@@ -13,17 +13,26 @@ body {
     background-color: #1a1a1a;
 }
 
+h1 {
+    font-size: 2rem;
+}
+
 a {
     text-decoration: none;
+    transition: .2s;
+}
+
+a:hover, a:active {
+    color: #dbdbdb;
 }
 
 p {
+    font-size: .9rem;
     font-weight: 300;
 }
 
-span {
-    padding: 0 .5rem;
-    font-weight: 300;
+ul {
+    list-style-type: none;
 }
 
 /* BUTTONS */
@@ -63,4 +72,52 @@ button:hover, button:active {
 
 .inner-space {
     padding: 20px 30px;
+}
+
+/* SECTION-01 */
+
+.section-01 {
+    background-image: url('../assets/lorem-image.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    box-shadow: inset 10000px 10000px #000000c4;
+    height: 95vh;
+    text-align: center;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.6rem;
+    border-bottom: 1px solid #ffffff3b;
+}
+
+.logo {
+    font-weight: 600;
+}
+
+.main-header li {
+    display: inline-block;
+    margin-left: 2rem;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 87vh;
+}
+
+.child-main-container {
+    max-width: 520px;
+}
+
+.child-main-container p {
+    margin: 1.2rem 0 1.5rem;
+}
+
+.child-main-container span {
+    padding: 0 .8rem;
+    font-weight: 300;
 }
