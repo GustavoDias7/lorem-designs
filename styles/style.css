@@ -201,3 +201,11 @@ figure h3 {
 .call-action p {
     margin: .2rem 0 1rem;
 }
+
+/* MAIN-FOOTER */
+
+.main-footer {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid #ffffff3b;
+}
