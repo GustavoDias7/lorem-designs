@@ -108,6 +108,35 @@ button:hover, button:active {
     margin-left: 2rem;
 }
 
+#hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+#hamburger:hover,
+#hamburger:active {
+    color: #dbdbdb;
+}
+
+#back {
+    display: none;
+    text-align: left;
+    margin: 1rem;
+    margin-bottom: 3rem;
+    justify-self: left;
+}
+
+#back-icon {
+    width: 1.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#back-icon:hover,
+#back-icon:active {
+    color: #dbdbdb;
+}
+
 .main-container {
     box-sizing: border-box;
     display: flex;
@@ -268,9 +297,32 @@ figure h3 {
     }
 }
 
-/* HAMBURGER MENU */
-/* @media (max-width: 550px) {
-    .nav-links {
-
+@media (max-width: 550px) {
+    h1 {
+        font-size: 1.5rem;
     }
-} */
+
+    .nav-links {
+        height: 100vh;
+        width: 200px;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        background-color: #fe004a;
+        transition: 0.8s;
+    }
+
+    .nav-links li {
+        display: block;
+        margin: 0 auto 3rem;
+    }
+
+    #hamburger {
+        display: block;
+    }
+
+    #back {
+        display: block;
+    }
+}
