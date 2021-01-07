@@ -326,3 +326,37 @@ figure h3 {
         display: block;
     }
 }
+
+@media (max-width: 500px) {
+    .child-section-03 {
+        display: block;
+        text-align: center;
+    }
+
+    .topics {
+        margin: auto;
+    }
+
+    .topics + .topics {
+        margin-top: 3rem;
+    }
+
+    .topic-icon {
+        margin: 0 auto .8rem;
+    }
+}
+
+@media (max-width: 345px) {
+    .main-buttons a,
+    .main-buttons span{
+        display: block;
+    }
+
+    .main-buttons span {
+        margin: .5rem 0;
+    }
+
+    button {
+        padding: .6rem 5rem;
+    }
+}
