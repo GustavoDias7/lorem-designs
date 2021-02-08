@@ -225,12 +225,6 @@ figure h3 {
     align-self: flex-start;
 }
 
-.topics:nth-child(7),
-.topics:nth-child(8),
-.topics:nth-child(9) {
-        display: none;
-}
-
 /* SECTION-04 */
 
 .section-04 {
