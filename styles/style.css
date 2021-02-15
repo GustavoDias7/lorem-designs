@@ -82,7 +82,7 @@ button:hover, button:active {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
     box-shadow: inset 10000px 10000px #000000c4;
     height: 95vh;
