@@ -141,9 +141,6 @@ LAYOUTS
 
 .section-01 {
     background-image: url('../assets/lorem-image.jpg');
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
     background-attachment: fixed;
     background-position: center; 
@@ -199,9 +196,11 @@ LAYOUTS
 }
 
 .color-overlay {
-    background-color: #000000c4;
+    position: absolute;
+    top: 0;
     width: 100%;
-    height: 100%;
+    height: 95vh;
+    background-color: #000000c4;
 }
 
 /* SECTION-02 */
@@ -215,18 +214,87 @@ LAYOUTS
     text-align: center;
 }
 
-figure {
-    max-width: 400px;
+.figure-container {
+    position: relative;
+    width: 100%;
 }
 
-.images {
+.figure-image {
     width: 100%;
     height: 84%;
     object-fit: cover;
+    background-color: #3b3b3b;
 }
 
-figure h3 {
+.hover-overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 84%;
+    background-color: #00000065;
+    opacity: 0;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.hover-overlay:hover {
+    opacity: 1;
+}
+
+.open-image {
+    width: 100%;
+    height: 100%;
+}
+
+.figure-container h3 {
     margin-top: .5rem;
+}
+
+.zoom-figure-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0000008f;
+}
+
+.disable {
+    display: none;
+}
+
+.container-image {
+    position: relative;
+    margin: auto;
+}
+
+.close-zoom-figure-image {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    border: none;
+    color: #fff;
+    background-color: #fe004a;
+}
+
+.close-zoom-figure-image:hover,
+.close-zoom-figure-image:active {
+    background-color: #c50038;
+}
+
+.zoom-image {
+    max-width: 90vw;
+    max-height: 90vh;
+    background-color: #3b3b3b;
 }
 
 /* SECTION-03 */
@@ -294,7 +362,7 @@ figure h3 {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    figure {
+    .figure-container {
         max-width: 500px;
     }
     
@@ -323,15 +391,15 @@ figure h3 {
 
 @media (max-width: 650px) {
     .section-02 {
-        display: block;
+        grid-template-columns: 1fr;
     }
 
-    figure {
+    .figure-container {
         margin-right: auto;
         margin-left: auto;
     }
     
-    figure + figure {
+    .figure-container + .figure-container {
         margin-top: 2rem;
     }
 }
