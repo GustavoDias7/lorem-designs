@@ -12,7 +12,8 @@ INDEX:
     3.3 - SECTION-02
     3.4 - SECTION-03
     3.5 - SECTION-04
-    3.6 - MAIN-FOOTER
+    3.6 - SECTION-05
+    3.7 - MAIN-FOOTER
 
 */
 
@@ -219,31 +220,24 @@ LAYOUTS
     width: 100%;
 }
 
-.figure-image {
+.figure-container .image-container {
     width: 100%;
     height: 84%;
-    object-fit: cover;
+    overflow: hidden;
     background-color: #3b3b3b;
 }
 
-.hover-overlay {
-    position: absolute;
-    top: 0;
+.figure-image {
     width: 100%;
-    height: 84%;
-    background-color: #00000065;
-    opacity: 0;
-    transition: .3s;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease-out;
     cursor: pointer;
 }
 
-.hover-overlay:hover {
-    opacity: 1;
-}
-
-.open-image {
-    width: 100%;
-    height: 100%;
+.figure-image:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
 }
 
 .figure-container h3 {
@@ -268,9 +262,14 @@ LAYOUTS
     display: none;
 }
 
-.container-image {
+.zoom-figure-image .image-container {
     position: relative;
     margin: auto;
+}
+
+.zoom-image {
+    max-width: 80vw;
+    max-height: 80vh;
 }
 
 .close-zoom-figure-image {
@@ -289,12 +288,6 @@ LAYOUTS
 .close-zoom-figure-image:hover,
 .close-zoom-figure-image:active {
     background-color: #c50038;
-}
-
-.zoom-image {
-    max-width: 90vw;
-    max-height: 90vh;
-    background-color: #3b3b3b;
 }
 
 /* SECTION-03 */
@@ -335,7 +328,42 @@ LAYOUTS
 
 /* SECTION-04 */
 
-.section-04 {
+.section-04 h2{
+    margin: 0 auto;
+    width: min-content;
+}
+
+.section-04-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 940px;
+    margin: auto;
+}
+
+.testimony {
+    flex: 0 1 420px;
+    padding: 1rem;
+    margin-top: 3rem;
+    background-color: #111111;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: .8rem;
+}
+
+.testimony-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: .8rem;
+}
+
+/* SECTION-05 */
+
+.section-05 {
     padding: 80px 30px; 
 }
 
@@ -369,6 +397,10 @@ LAYOUTS
     .images {
         width: 100%;
         height: 84%;
+    }
+
+    .testimony {
+        margin: 3rem auto 0;
     }
 }
 
