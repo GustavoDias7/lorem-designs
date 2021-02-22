@@ -17,8 +17,7 @@ back.addEventListener('click', () => {
 document.addEventListener('click', event => {
     if (!event.target.classList.contains('open-image')) return;
     zoom_figure_image.classList.toggle('disable');
-    let little_image = event.target.parentNode.previousElementSibling.currentSrc;
-    zoom_image.setAttribute('src', little_image);
+    zoom_image.setAttribute('src', event.target.currentSrc);
 });
 
 close_zoom_figure_image.addEventListener('click', () => {
